@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'XXco 极客笔记'
+  site: 'https://xxco.cc'
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: 'XXco 极客笔记 - 实用技术教程与宝藏工具分享'
+    template: '%s — XXco 极客笔记'
+  description: "XXco 极客笔记是一个记录真实踩坑经验的技术博客。这里提供通俗易懂的编程基础教程、环境配置指南，并定期分享亲测好用的独立开发资源与高效数字化工具，陪你一起从零轻松进化。"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: 'XXco 极客笔记'
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/default.jpg' # 确保此路径图片在项目中存在，避免打包报错
         width: 1200
         height: 628
     type: website
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: zh-CN # 如果写中文教程，务必改为 zh-CN 以利于 Google 精准收录
   textDirection: ltr
 
 apps:
@@ -38,27 +38,27 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: '/%slug%' # 完美的扁平化 URL，对 SEO 极为友好
       robots:
         index: true
 
     list:
       isEnabled: true
-      pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
+      pathname: 'blog' 
       robots:
         index: true
 
     category:
       isEnabled: true
-      pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
+      pathname: 'category' 
       robots:
         index: true
 
     tag:
       isEnabled: true
-      pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
+      pathname: 'tag' 
       robots:
-        index: false
+        index: false # 标签页通常内容重复度高，设为 false 防止分散网站的权重（很专业的 SEO 做法）
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
@@ -66,7 +66,7 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: null # or "G-XXXXXXXXXX"
+      id: null # 💡 后续注册了 Google Analytics 4 (GA4) 后，把 G-XXXXXXXXXX 填在这里
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: 'system' # 自动跟随读者的系统黑夜/白天模式
